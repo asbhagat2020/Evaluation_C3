@@ -1,4 +1,4 @@
-const Order = require("../models/order");
+const Order = require("../models/Order.js");
 const Customer = require("../models/Costomer.js");
 
 exports.getOrdersByCustomer = async (req, res) => {
