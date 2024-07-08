@@ -1,26 +1,26 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../configs/db");
-const Customer = require("./costomer");
+const Customer = require("./Costomer.js");
 
 
 const Order = sequelize.define('Order', {
-    date:{
+    date: {
         type: DataTypes.DATE,
-        allowNull:false
+        allowNull: false
     },
-    total:{
+    total: {
         type: DataTypes.DECIMAL,
-        allowNull:false
+        allowNull: false
     },
-    costomerId:{
+    customerId: {
         type: DataTypes.INTEGER,
-        references:{
-            model:Customer,
-            key:"id",
+        references: {
+            model: Customer,
+            key: "id",
         },
     },
-},{timestamps:true});
+}, { timestamps: true });
 
-Order.belongsTo(Customer,{foreignKey:'customerId'})
+Order.belongsTo(Customer, { foreignKey: 'customerId' });
 
 module.exports = Order;

@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.get("/:id", getBookById);
 
-module.exports=router;
+module.exports = router;

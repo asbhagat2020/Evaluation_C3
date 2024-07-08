@@ -1,11 +1,14 @@
 const express = require("express");
-const authRoutes = require("./src/routes/authRoutes.js");
-const orderRoutes = require("./src/routes/orderRoutes.js");
-const bookRoutes = require("./src/routes/bookRoutes.js");
-const reviewRoutes = require("./src/routes/reviewRoutes.js");
-const sequelize = require("./src/configs/db.js");
-const connectDB = require("./src/configs/mongoose.js");
+const dotenv = require("dotenv");
+const authRoutes = require("./src/routes/authRoutes");
+const orderRoutes = require("./src/routes/orderRoutes");
+const bookRoutes = require("./src/routes/bookRoutes");
+const reviewRoutes = require("./src/routes/reviewRoutes");
+const sequelize = require("./src/configs/db");
+const connectDB = require("./src/configs/mongoose");
 const cors = require("cors");
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
