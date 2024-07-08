@@ -6,11 +6,11 @@ exports.register = async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
-        const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(password, salt);
+       
+        const hashedPassword = bcrypt.hash(password, 10);
 
         const customer = await Customer.create({ name, email, password: hashedPassword });
-        res.status(201).json(customer);
+       return res.status(201).json(customer);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
