@@ -19,7 +19,14 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/books", bookRoutes);
 app.use("/api/reviews", reviewRoutes);
 
-sequelize.sync();
-connectDB();
+(async () => {
+    try {
+        await sequelize.sync();
+        await connectDB();
+        console.log('Databases synced successfully.');
+    } catch (error) {
+        console.error('Failed to sync databases:', error);
+    }
+})();
 
 module.exports = app;
