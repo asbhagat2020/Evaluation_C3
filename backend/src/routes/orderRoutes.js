@@ -1,7 +1,7 @@
 const express = require("express");
 const auth = require("../middlewares/auth");
-const { getOrdersByCustomer } = require("../controllers/orderControllers.js");
-const role = require("../middlewares/role.js");
+const { getOrdersByCustomer } = require("../controllers/orderControllers");
+const role = require("../middlewares/role");
 
 const router = express.Router();
 

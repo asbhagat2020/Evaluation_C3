@@ -1,4 +1,4 @@
-const Book = require("../models/Book.js");
+const Book = require("../models/Book");
 
 exports.getBookById = async (req, res) => {
     try {

@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../configs/db');
-const Customer = require('./Costomer.js');
+const sequelize = require('../configs/mysql.db.js');
+const Customer = require('./Customer.js');
 
 const Order = sequelize.define('Order', {
   date: {

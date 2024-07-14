@@ -11,10 +11,10 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 
 sequelize.authenticate()
     .then(() => {
-        console.log('Connection has been established successfully.');
+        console.log('MySQL connection established successfully.');
     })
     .catch(err => {
-        console.error('Unable to connect to the database:', err);
+        console.error('Unable to connect to MySQL database:', err);
     });
 
 module.exports = sequelize;

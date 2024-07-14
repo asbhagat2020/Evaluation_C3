@@ -1,5 +1,5 @@
-const Order = require("../models/Order.js");
-const Customer = require("../models/Costomer.js");
+const Order = require("../models/Order");
+const Customer = require("../models/Customer");
 
 exports.getOrdersByCustomer = async (req, res) => {
     try {

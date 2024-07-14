@@ -4,8 +4,8 @@ const authRoutes = require("./src/routes/authRoutes");
 const orderRoutes = require("./src/routes/orderRoutes");
 const bookRoutes = require("./src/routes/bookRoutes");
 const reviewRoutes = require("./src/routes/reviewRoutes");
-const sequelize = require("./src/configs/db");
-const connectDB = require("./src/configs/mongoose");
+const sequelize = require("./src/configs/mysql.db");
+const connectDB = require("./src/configs/mongo.db");
 const cors = require("cors");
 
 dotenv.config();

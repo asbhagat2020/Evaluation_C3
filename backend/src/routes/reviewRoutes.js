@@ -1,6 +1,5 @@
 const express = require("express");
-const { getReviewsByBook } = require("../controllers/revieControllers.js");
-
+const { getReviewsByBook } = require("../controllers/reviwControllers");
 
 const router = express.Router();
 
